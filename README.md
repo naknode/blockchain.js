@@ -1,5 +1,7 @@
 # blockchain.js
 
+![Demo](blockchain.gif)
+
 > Native blockchain implementation in JavaScript.
 
 ## How to use
