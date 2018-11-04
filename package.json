@@ -1,0 +1,43 @@
+{
+  "name": "blockchain",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Blockchain implementation in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava tests/ --verbose --color",
+    "test:watch": "ava tests/ --verbose --color --watch",
+    "peer1": "./node_modules/.bin/cross-env PEER_PORT=6001 HTTP_PORT=3001 node index.js",
+    "peer2": "./node_modules/.bin/cross-env PEER_PORT=6002 HTTP_PORT=3002 PEERS=6001 node .",
+    "peer3": "./node_modules/.bin/cross-env PEER_PORT=6003 HTTP_PORT=3003 PEERS=6001,6002 node .",
+    "lint": "./node_modules/.bin/eslint *.js",
+    "mine": "curl --data '{\"content\" : \"Test data.\"}' -H \"Content-Type: application/json\" http://localhost:3001/mine"
+  },
+  "keywords": [
+    "blockchain",
+    "block",
+    "chain",
+    "crytpo",
+    "cryptocurrency",
+    "bitcoin",
+    "ethereum",
+    "dogecoin",
+    "litecoin"
+  ],
+  "engines": {
+    "node": ">=9.0.0"
+  },
+  "dependencies": {
+    "ava": "^0.25.0",
+    "crypto-js": "^3.1.9-1",
+    "hapi": "17.x.x",
+    "ws": "^5.0.0"
+  },
+  "author": "Dan Jasnowski <djasnowski@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^5.1.4",
+    "eslint": "^4.18.2",
+    "eslint-plugin-node": "^6.0.1"
+  }
+}
