@@ -1,4 +1,4 @@
-# Blockchain.js
+# blockchain.js
 
 > Native blockchain implementation in JavaScript.
 
